@@ -146,9 +146,9 @@ extern "C" {
 ** [sqlite3_libversion_number()], [sqlite3_sourceid()],
 ** [sqlite_version()] and [sqlite_source_id()].
 */
-#define SQLITE_VERSION        "3.49.1"
-#define SQLITE_VERSION_NUMBER 3049001
-#define SQLITE_SOURCE_ID      "2025-02-18 13:38:58 873d4e274b4988d260ba8354a9718324a1c26187a4ab4c1cc0227c03d0f10e70"
+#define SQLITE_VERSION        "3.49.2"
+#define SQLITE_VERSION_NUMBER 3049002
+#define SQLITE_SOURCE_ID      "2025-05-07 10:39:52 17144570b0d96ae63cd6f3edca39e27ebd74925252bbaf6723bcb2f6b4861fb1"
 
 /*
 ** CAPI3REF: Run-Time Library Version Numbers
@@ -7308,7 +7308,7 @@ SQLITE_API int sqlite3_table_column_metadata(
 ** If that does not work, it constructs a name "sqlite3_X_init" where the
 ** X is consists of the lower-case equivalent of all ASCII alphabetic
 ** characters in the filename from the last "/" to the first following
-** "." and omitting any initial "libs".)^
+** "." and omitting any initial "lib".)^
 ** ^The sqlite3_load_extension() interface returns
 ** [SQLITE_OK] on success and [SQLITE_ERROR] if something goes wrong.
 ** ^If an error occurs and pzErrMsg is not 0, then the

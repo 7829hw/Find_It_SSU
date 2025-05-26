@@ -1,0 +1,120 @@
+# ===========================================
+# Visual Studio + CMake + Qt 프로젝트용 .gitignore
+# ===========================================
+
+# CMake 빌드 디렉토리 (CMakePresets.json에서 정의된 빌드 경로)
+build-msvc-debug/
+build-msvc-release/
+build/
+out/
+
+# Visual Studio 관련 파일
+.vs/
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# CMake 생성 파일
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+!CMakePresets.json
+
+# 실행 파일 및 라이브러리
+*.exe
+*.dll
+*.lib
+*.pdb
+*.ilk
+*.exp
+*.idb
+*.obj
+*.o
+
+# Qt 관련
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qm
+
+# 임시 파일
+*.tmp
+*.temp
+*.log
+*.tlog
+
+# 디버그 정보
+*.pch
+*.ipch
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
+
+# 사용자별 설정
+.vscode/
+*.code-workspace
+
+# 백업 파일
+*.bak
+*.old
+*.orig
+*~
+
+# 압축 파일
+*.zip
+*.rar
+*.7z
+
+# 패키지 매니저
+vcpkg_installed/
+conan/
+
+# 테스트 결과
+TestResults/
+
+# 시스템 파일
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ===========================================
+# 프로젝트별 예외 설정
+# ===========================================
+
+# SQLite3 라이브러리는 포함 (libs 폴더 유지)
+!libs/
+!libs/sqlite3/
+!libs/sqlite3/*.h
+!libs/sqlite3/*.lib
+!libs/sqlite3/*.dll
+
+# 리소스 파일은 포함
+!*.qrc
+!*.ui
+!*.rc
+
+# 아이콘, 이미지 및 폰트 파일은 포함
+!*.ico
+!*.png
+!*.jpg
+!*.svg
+!*.ttf
+!*.otf
+!*.woff
+!*.woff2
+!*.eot
+!*.fon

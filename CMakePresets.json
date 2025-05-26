@@ -2,23 +2,42 @@
   "version": 4,
   "configurePresets": [
     {
-      "name": "default",
-      "displayName": "Default",
-      "description": "Default configure options for file_tag project.",
-      "generator": "Ninja",
-      "binaryDir": "${sourceDir}/cmake-build-debug",
+      "name": "msvc-debug",
+      "displayName": "MSVC Debug",
+      "description": "MSVC Debug configuration",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build-msvc-debug",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug"
       },
       "environment": {
-        "CMAKE_PREFIX_PATH": "C:/Qt/6.9.0/mingw_64"
+        "CMAKE_PREFIX_PATH": "C:/Qt/6.9.0/msvc2022_64"
+      }
+    },
+    {
+      "name": "msvc-release",
+      "displayName": "MSVC Release",
+      "description": "MSVC Release configuration",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build-msvc-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      },
+      "environment": {
+        "CMAKE_PREFIX_PATH": "C:/Qt/6.9.0/msvc2022_64"
       }
     }
   ],
   "buildPresets": [
     {
-      "name": "default",
-      "configurePreset": "default"
+      "name": "msvc-debug",
+      "configurePreset": "msvc-debug"
+    },
+    {
+      "name": "msvc-release",
+      "configurePreset": "msvc-release"
     }
   ]
 }
